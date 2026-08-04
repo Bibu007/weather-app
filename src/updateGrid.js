@@ -1,0 +1,19 @@
+export function updateGrid(data) {
+  const feels = document.querySelector("#feels");
+  const uv = document.querySelector("#uv");
+  const prec = document.querySelector("#prec");
+  const hum = document.querySelector("#hum");
+  const vis = document.querySelector("#vis");
+  const wind = document.querySelector("#wind");
+
+  const sup = document.createElement("sup");
+  sup.textContent = "o";
+  feels.textContent = data.days[0].feelslike;
+  feels.appendChild(sup);
+  uv.textContent = data.days[0].uvindex;
+  prec.textContent = data.days[0].precip;
+  hum.textContent = `${data.days[0].humidity}%`;
+  console.log(data.days[0].humidity);
+  vis.textContent = data.days[0].visibility;
+  wind.textContent = data.days[0].windspeed;
+}
