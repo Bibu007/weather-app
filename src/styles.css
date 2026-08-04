@@ -103,7 +103,8 @@ button{
     border: 1px solid black;
     width: 900px;
     border-radius: 20px;
-    background-image: url(./images/sunny.jpg);
+    
+    background-size: cover;
     color: white;
     font-weight: 900;
     height: 250px;
@@ -199,12 +200,83 @@ img{
 }
 
 .day{
-  width: 100px;
+  min-width: 80px;
+  font-size: 1.3rem;
 }
 
-.high{
+.range{
   min-width: 150px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: right;
 }
 
+dialog{
+  display: grid;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+.error-msg{
+  background-color: rgb(241, 232, 232);
+  width: 600px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #4C4C4C;
+  display:none;
+}
+
+.error-msg.active{
+  display: block;
+}
+
+.input-wrapper{
+  align-self: flex-end;
+}
+
+/* Full-screen dark semi-transparent backdrop */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65); /* Dark dimming effect */
+  backdrop-filter: blur(4px);            /* Optional modern background blur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;                         /* Sit above all other page content */
+  color: #ffffff;
+  font-family: sans-serif;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hide utility class */
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Prevents clicks on hidden overlay */
+}
+
+/* CSS Animated Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;            /* Color of the active spinning wedge */
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-text {
+  margin-top: 16px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}

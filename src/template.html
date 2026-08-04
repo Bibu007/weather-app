@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oi&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
-<body>
-  </head>
   <body>
     <div id="header">
       <div id="logo"><h1>Forecast</h1></div>
       <div id="search">
-        <input type="text" id="country" list="countries" placeholder="Start typing a country name...">
+        <div class="input-wrapper">
+            <input type="text" id="search" list="countries" placeholder="Start typing a place name...">
+            <div class="error-msg">No results found</div>
+        </div>
         <datalist id="countries"></datalist>
       </div>
       <div id="unit-selector">
-        <button id="celcius">C<sup>o</button>
-        <button id="farenheit">F<sup>o</button>
+        <button id="converter">C<sup>o</sup>/F<sup>o</sup></button>
       </div>
     </div>
     <div id="body-container">
@@ -44,57 +44,11 @@
         </div>
       </div>
       <div id="forecast-container">
-        <div class="day-tile">
-            <div class="day">Today</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
-        <div class="day-tile">
-            <div class="day">Tue</div>
-            <div class="icon"><img src="./images/partly_cloudy.png" alt=""></div>
-            <div class="high">32 / 24</div>
-        </div>
       </div>
+    </div>
+    <div id="full-page-loader" class="loader-overlay hidden" aria-live="assertive" aria-label="Loading">
+    <div class="spinner"></div>
+    <p class="loader-text">Loading, please wait...</p>
     </div>
   </body>
 </html>

@@ -14,16 +14,17 @@ export function updateForcastContainer(data) {
     const image = document.createElement("img");
     image.setAttribute("src", `${iconImageGenerator(data.days[i].icon)}`);
     icon.appendChild(image);
-    const high = document.createElement("div");
-    high.className = "high";
+    const range = document.createElement("div");
+    range.className = "range";
+    range.dataset.index = i;
 
     const date = new Date(data.days[i].datetime);
     day.textContent = format(date, "EEE");
-    high.textContent = `${data.days[i].tempmax} / ${data.days[i].tempmin}`;
+    range.innerHTML = `${Math.floor(data.days[i].tempmax)}<sup>o</sup> / ${Math.floor(data.days[i].tempmin)}<sup>o</sup>`;
 
     tile.appendChild(day);
     tile.appendChild(icon);
-    tile.appendChild(high);
+    tile.appendChild(range);
 
     forecastGrid.appendChild(tile);
   }

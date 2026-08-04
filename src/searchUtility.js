@@ -1,3 +1,6 @@
+import { removeLoader, showLoader } from "./errorDialog.js";
+import { updateScreen } from "./updateScreen.js";
+
 export async function loadCountries() {
   try {
     // Fetch country names from REST Countries API
@@ -33,4 +36,14 @@ export async function loadCountries() {
 }
 
 // Load list when the page loads
-loadCountries();
+//loadCountries();
+
+export function searchUtility() {
+  const search = document.querySelector("#search");
+  search.addEventListener("change", (event) => {
+    showLoader();
+    console.log(event.target.value);
+    updateScreen(event.target.value);
+    removeLoader();
+  });
+}

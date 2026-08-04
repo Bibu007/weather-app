@@ -8,12 +8,12 @@ export function updateGrid(data) {
 
   const sup = document.createElement("sup");
   sup.textContent = "o";
-  feels.textContent = data.days[0].feelslike;
+  feels.textContent = Math.floor(data.currentConditions.feelslike);
   feels.appendChild(sup);
-  uv.textContent = data.days[0].uvindex;
-  prec.textContent = data.days[0].precip;
-  hum.textContent = `${data.days[0].humidity}%`;
-  console.log(data.days[0].humidity);
-  vis.textContent = data.days[0].visibility;
-  wind.textContent = data.days[0].windspeed;
+  uv.textContent = data.currentConditions.uvindex;
+  prec.textContent = data.currentConditions.precip;
+  hum.textContent = `${Math.floor(data.days[0].humidity)}%`;
+  //console.log(Math.floor(data.days[0].humidity));
+  vis.textContent = Math.floor(data.currentConditions.visibility);
+  wind.textContent = Math.floor(data.currentConditions.windspeed);
 }
