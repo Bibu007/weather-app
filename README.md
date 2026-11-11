@@ -27,6 +27,13 @@ A dynamic weather application built with JavaScript as part of [The Odin Project
 - **Webpack** – Module bundling and asset management.
 - **date-fns** – Date formatting and manipulation.
 
+- ### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- npm
+
 
 ### Installation
 
