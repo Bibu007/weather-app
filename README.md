@@ -3,7 +3,7 @@
 A dynamic weather application built with JavaScript as part of [The Odin Project](https://www.theodinproject.com/). The application fetches weather information from external APIs and displays weather conditions for searched locations.
 
 <p align="center">
-  <a href="YOUR_LIVE_DEMO_URL">
+  <a href="https://bibu007.github.io/weather-app/">
     <img src="https://img.shields.io/badge/☀%20VISIT%20NOW-38BDF8?style=for-the-badge&labelColor=0F172A" alt="Visit Now" />
   </a>
 </p>
