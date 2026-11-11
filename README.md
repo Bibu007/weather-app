@@ -1,4 +1,4 @@
-# 🌤️ Weather App
+# Weather App
 
 A dynamic weather application built with JavaScript as part of [The Odin Project](https://www.theodinproject.com/). The application fetches weather information from external APIs and displays weather conditions for searched locations.
 
@@ -11,7 +11,7 @@ A dynamic weather application built with JavaScript as part of [The Odin Project
 <img width="1470" height="775" alt="Screenshot 2026-10-02 at 3 12 08 PM" src="https://github.com/user-attachments/assets/552c10df-caf5-431e-a75d-da324690155b" />
 
 
-## ✨ Features
+## Features
 
 - Search for weather information by location.
 - Fetch and display weather data using external APIs.
@@ -19,7 +19,7 @@ A dynamic weather application built with JavaScript as part of [The Odin Project
 - Date formatting using `date-fns`.
 - Interactive user interface.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **JavaScript (ES6+)** – Application logic and API integration.
 - **HTML5** – Page structure.
@@ -54,7 +54,7 @@ A dynamic weather application built with JavaScript as part of [The Odin Project
    npx webpack serve
    ```
 
-## 📚 What I Learned
+## What I Learned
 
 - Working with external APIs and asynchronous JavaScript.
 - Handling API responses and updating the DOM dynamically.
@@ -64,7 +64,7 @@ A dynamic weather application built with JavaScript as part of [The Odin Project
 - Using Webpack to bundle application assets.
 - Working with dates using `date-fns`.
 
-## 📖 Acknowledgements
+## Acknowledgements
 
 Built as part of [The Odin Project – JavaScript Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript).
 
